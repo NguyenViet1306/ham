@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let array
+    function creatArray() {
+        let n = +prompt("Nhập vào số phần tử của mảng: ")
+        array = new Array(n)
+        for (let i = 0; i < array.length; i++) {
+            array[i] = prompt("Nhập vào phần tử thứ " + (i + 1))
+        }
+    }
+
+    function bai9() {
+        creatArray()
+        let mang2 = prompt("nhập giá trị")
+        let count = 0
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] === mang2) {
+                count++
+            }
+            if (count === 0) {
+                count = -1
+            }
+        }
+        return count
+    }
+    alert(bai9())
+</script>
